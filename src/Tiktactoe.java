@@ -17,6 +17,8 @@ public class Tiktactoe {
    String playerO = "O";
    String currentplayer = playerX;
 
+   boolean gameOver = false;
+
     Tiktactoe() {
         frame.setVisible(true);
         frame.setSize(boardwidth,boardheight);
@@ -54,14 +56,34 @@ public class Tiktactoe {
 
                tile.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
+                    if (gameOver) return;
                     JButton tile = (JButton) e.getSource();
-                    tile.setText(currentplayer);
-
-                    currentplayer= currentplayer == playerX ? playerO : playerX;
-                    textLabel.setText(currentplayer + "'s turn.");
+                    if (tile.getText()== ""){
+                        tile.setText(currentplayer);
+                        checkWinner();
+                    if (!gameOver) {
+                          currentplayer= currentplayer == playerX ? playerO : playerX;
+                          textLabel.setText(currentplayer + "'s turn.");
+                        } 
+                    }
                 }
                });
             }         
         }
     }
-}
+    void checkWinner() {
+       //Horizontal
+       for (int r = 0; r < 3; r++) {
+           if (board[r][0].getText() == "")continue;
+           
+           if(board[r][0].getText() == board[r][1].getText() &&
+              board[r][1].getText() == board[r][2].getText()) {
+                gameOver = true;
+                return;
+               }
+        
+           }
+       }
+
+    }
+
