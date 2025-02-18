@@ -1,18 +1,49 @@
-## Getting Started
+# 🎮 Tic-Tac-Toe - The Ultimate Showdown!  
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📌 Description  
+Ready to relive your childhood battles? **Tic-Tac-Toe** is here to bring back those thrilling moments of **X vs. O!**  
+This is a **console-based** implementation of the classic **Tic-Tac-Toe** game, built using **Java**.  
+Whether you're looking for a quick duel against a friend or a strategic war of wits, this game has got you covered.  
 
-## Folder Structure
+## ✨ Features  
+✔ **Classic Gameplay** – The nostalgic **3x3** grid that never gets old!  
+✔ **Two-Player Mode** – Challenge your best friend (or worst enemy).  
+✔ **Turn-Based System** – No cheating! The game ensures fair turns.  
+✔ **Instant Win Detection** – Who’s the real mastermind? The game will tell you!  
+✔ **Simple Console UI** – No distractions—just pure **Tic-Tac-Toe** action.  
 
-The workspace contains two folders by default, where:
+## 🛠 Requirements  
+- **Java 8** or higher **JDK** installed  
+- **Console-based Execution** (No GUI yet!)  
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🚀 Setup Instructions  
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 🔹 To Play the Game:  
+1️⃣ **Compile the Code**  
+   ```sh
+   javac TicTacToe.java
+   ```  
+2️⃣ **Run the Program**  
+   ```sh
+   java TicTacToe
+   ```  
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 🎯 How to Play  
+- **Player 1** uses **X**, **Player 2** uses **O**.  
+- Take turns marking your spot on the **3x3 grid**.  
+- The first player to align **three in a row (horizontal, vertical, or diagonal)** wins!  
 
-## Dependency Management
+## ⚠ Known Issues & Bugs  
+⛔ **No AI Yet** – It's strictly a two-player game for now.  
+⛔ **No GUI** – Just old-school console fun (for now!).  
+⛔ **No Score Tracking** – Every game is a fresh battle.  
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 🔮 Future Enhancements  
+✅ Implement **AI opponent** for solo players.  
+✅ Develop a **graphical user interface (GUI)** for an interactive experience.  
+✅ Add **score tracking** to keep the rivalry alive.  
+✅ Introduce **different grid sizes** for extended fun (4x4, 5x5, anyone?).  
+
+## 👤 Author  
+**Ankit Jadhav**  
+🔗 GitHub: [ankit8801](https://github.com/ankit8801)  
