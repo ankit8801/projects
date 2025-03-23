@@ -49,7 +49,7 @@ public class Tiktactoe {
                 boardPanel.add(tile);
 
                 tile.setBackground(Color.darkGray);
-                tile.setForeground(Color.GREEN);
+                tile.setForeground(Color.white);
                 tile.setFont(new Font("Arial", Font.BOLD, 120));
                 tile.setFocusable(false);
                //tile.setText(currentplayer);
@@ -74,16 +74,38 @@ public class Tiktactoe {
     void checkWinner() {
        //Horizontal
        for (int r = 0; r < 3; r++) {
-           if (board[r][0].getText() == "")continue;
+           if (board[r][0].getText() == "") continue;
            
            if(board[r][0].getText() == board[r][1].getText() &&
               board[r][1].getText() == board[r][2].getText()) {
+                for (int i = 0; i < 3; i++) {
+                    setWinner(board[r][i]);
+                }
                 gameOver = true;
                 return;
                }
         
            }
-       }
+           //vertical
+           for (int c = 0; c < 3; c++) {
+            if (board[0][c].getText() == "") continue; {}
 
+            if (board[0][c].getText() == board[1][c].getText() &&
+            board[1][c].getText() == board[2][c].getText()) {
+                for (int i = 0; i < 3; i++) {
+                    setWinner(board[i][c]);
+                }
+                gameOver = true;
+                return;
+            }
+           }
+               
+           }
+      void setWinner(JButton tile ) {
+        tile.setForeground(Color.green);
+        tile.setBackground(Color.gray);
+        textLabel.setText(currentplayer + " is the winner!");
+     
+      }
     }
 
